@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- # = getter,setter(get,set) -->
+  <mapper namespace="com.spring.mappers.product">
+  	<select id="list" resultType="com.spring.domain.ProductVO">
+  		select num, product, price, quantity, company from product
+  	</select>
+  	<insert id="write" parameterType="com.spring.domain.ProductVO">
+  		insert into product(product, price, quantity, company) values (#{product}, #{price}, #{quantity}, #{company})
+  	</insert>
+  	<select id="view" parameterType="int" resultType="com.spring.domain.ProductVO">
+  		select num, product, price, quantity, company from product where num=#{num}
+  	</select>
+  	<update id="modify" parameterType="com.spring.domain.ProductVO">
+  		update product set product=#{product}, price=#{price}, quantity=#{quantity}, company=#{company} where num=#{num}
+  	</update>
+  	<delete id="delete" parameterType="int">
+  		delete from product where num=#{num}
+  	</delete>
+  </mapper>
