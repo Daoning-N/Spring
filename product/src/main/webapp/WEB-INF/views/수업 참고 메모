@@ -1,4 +1,0 @@
--무슨 작업을 하든 "Hello World" 가 화면에 나오지 않으면 '오타'로 인한 오류일 확률이 매우 큼
--src/main/java 에 패키지(클래스&인터페이스) 생성(damain, dao, service, controller)
--src/views 에 jsp 파일 생성 -> productVO 작업 시작
--Service는 장치와 장치사이를 연결하는 중간다리 역할
